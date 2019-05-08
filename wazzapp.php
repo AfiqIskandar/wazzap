@@ -92,59 +92,59 @@ class WazzApp
         $channelGaul->addMessage(new Message($anton, 'No problemo'));
 
 
-        // // Tampilkan pesan dalam urutan pesan baru ada di bawah
-        // foreach ($channelGaul->getMessages() as $message) {
-        //     debug($message);
-        // }
+        // Tampilkan pesan dalam urutan pesan baru ada di bawah
+        foreach ($channelGaul->getMessages() as $message) {
+            debug($message);
+        }
 
-        // debug('');
+        debug('');
 
-        // // Tampilkan semua channel secara alfabetis
-        // debug('List channel terurut abjad:');
-        // foreach (Channel::getListByName() as $availableChannel) {
-        //     debug($availableChannel->getName());
-        // }
+        // Tampilkan semua channel secara alfabetis
+        debug('List channel terurut abjad:');
+        foreach (Channel::getListByName() as $availableChannel) {
+            debug($availableChannel->getName());
+        }
 
-        // debug('');
+        debug('');
 
-        // debug('List channel terurut jumlah anggota:');
-        // foreach (Channel::getListByMemberCount() as $availableChannel) {
-        //     debug($availableChannel->getName() . "(" . $availableChannel->getMemberCount() . ")");
-        // }
+        debug('List channel terurut jumlah anggota:');
+        foreach (Channel::getListByMemberCount() as $availableChannel) {
+            debug($availableChannel->getName() . "(" . $availableChannel->getMemberCount() . ")");
+        }
 
-        // debug('');
+        debug('');
 
-        // debug('Daftar channel dimana Anton terdaftar:');
-        // foreach ($anton->getChannels() as $channel) {
-        //     debug($channel->getName());
-        // }
+        debug('Daftar channel dimana Anton terdaftar:');
+        foreach ($anton->getChannels() as $channel) {
+            debug($channel->getName());
+        }
 
-        // debug('');
+        debug('');
 
-        // debug('Daftar channel dimana Budi terdaftar:');
-        // foreach ($budi->getChannels() as $channel) {
-        //     debug($channel->getName());
-        // }
+        debug('Daftar channel dimana Budi terdaftar:');
+        foreach ($budi->getChannels() as $channel) {
+            debug($channel->getName());
+        }
 
-        // debug('');
+        debug('');
 
-        // debug('Citra bergabung ke WazzApp');
-        // $citra = new Person('Citra');
+        debug('Citra bergabung ke WazzApp');
+        $citra = new Person('Citra');
 
-        // debug('Citra mencari channel yang mengandung kata "Anak" dan bergabung ke channel yang muncul di hasil pencarian');
-        // $channelAnak = Channel::search('anak');
-        // foreach ($channelAnak as $channel) {
-        //     debug($channel->getName());
-        //     $citra->joinChannel($channel);
-        // }
+        debug('Citra mencari channel yang mengandung kata "Anak" dan bergabung ke channel yang muncul di hasil pencarian');
+        $channelAnak = Channel::search('anak');
+        foreach ($channelAnak as $channel) {
+            debug($channel->getName());
+            $citra->joinChannel($channel);
+        }
 
-        // debug('');
+        debug('');
 
-        // debug('Daftar anggota channel Gaul:');
-        // foreach($channelGaul->getMembers() as $member)
-        // {
-        //     debug($member->getName());
-        // }
+        debug('Daftar anggota channel Gaul:');
+        foreach($channelGaul->getMembers() as $member)
+        {
+            debug($member->getName());
+        }
     }
 }
 
